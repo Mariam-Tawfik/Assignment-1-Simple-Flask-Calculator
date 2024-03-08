@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask Calculator</title>
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin: 50px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        input,  button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        select {
+        font-size: 32px; /* Adjust the font size as needed */
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        h2 {
+            color: #4caf50;
+            margin-top: 20px;
+        }
+        .calculator-icon {
+        width: 50px; /* Adjust the width as needed */
+        vertical-align: middle;
+        margin-right: 10px;
+    }
+
+    </style>
+</head>
+<body>
+    <h1><img class="calculator-icon" src="{{ url_for('static', filename='calculator.jpg') }}" alt="Calculator Icon"> Simple Calculator</h1>
+    <form action="/calculate" method="post">
+        <label for="num1">Number 1:</label>
+        <input type="number" name="num1" required>
+        
+        <label for="operation">Operation:</label>
+        <select name="operation" required>
+            <option value="add">+</option>
+            <option value="subtract">-</option>
+            <option value="multiply">*</option>
+            <option value="divide">/</option>
+        </select>
+        
+        <label for="num2">Number 2:</label>
+        <input type="number" name="num2" required>
+        
+        <button type="submit">Calculate</button>
+    </form>
+
+    {% if result is not none %}
+        <h2>Result: {{ result }}</h2>
+    {% endif %}
+</body>
+</html>
