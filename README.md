@@ -16,8 +16,7 @@ User-friendly interface.
 4. Run the app using: env: FLASK_APP ="app.py" then flask run.
 
 # Demo
-Watch the demo from this link: 
+Watch the demo from this link: https://drive.google.com/file/d/1OB54P_liBH65oBOotfNNOaO26RamLq7Q/view?usp=sharing
 
 ![Screenshot 1](./static/Screenshot%20(36).png)
-![Screenshot 2](./static/Screenshot%20(37).png)
 ![Screenshot 3](./static/Screenshot%20(38).png)
