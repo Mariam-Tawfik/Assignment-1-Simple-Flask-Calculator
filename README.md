@@ -17,3 +17,7 @@ User-friendly interface.
 
 # Demo
 Watch the demo from this link: 
+
+![Screenshot 1](./static/Screenshot%20(36).png)
+![Screenshot 2](./static/Screenshot%20(37).png)
+![Screenshot 3](./static/Screenshot%20(38).png)
